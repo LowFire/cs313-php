@@ -13,7 +13,7 @@
     <div class="greenStyle container jumbotron text-center pb-2">
       <h1>Hello, My Name is Dallin Lovin</h1>
       <p>And welcome to my page!</p>
-      <?php echo "<p>Date: " . date("F d, Y  ") ."Time: " . date("g:i a") "</p>";?>
+      <?php echo "<p>Date: " . date("F d, Y  ") . "Time: " . date("g:i a") . "</p>";?>
     </div>
     
     <div class="container d-flex justify-content-between">
