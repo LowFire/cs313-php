@@ -5,47 +5,6 @@ $majors = [
   'cit' => 'Computer Information Technology',
   'ce' => 'Computer Engineering'
 ];
-
-$countries = [
-  'NA' => 'North America',
-  'SA' => 'South America',
-  'EU' => 'Europe',
-  'AS' => 'Asia',
-  'AU' => 'Australia',
-  'AF' => 'Africa',
-  'AN' => 'Anterctica'
-  'AU' => 'Australia',
-  'AF' => 'Africa',
-  'AN' => 'Anterctica'
-  'AU' => 'Australia',
-  'AF' => 'Africa',
-  'AN' => 'Anterctica'
-  'AU' => 'Australia',
-  'AF' => 'Africa',
-  'AN'
-  'AU' => 'Australia',
-  'AF' => 'Africa',
-  ''
-  'AU' => 'Australia',
-  'AF' => 'Africa',
-  ''
-  'AU' => 'Australia',
-  'AF' => 'Africa',
-  
-  'AU' => 'Australia',
-  'AF' 
-  'AU' => 'Australia',
-  ''
-  'AU' => 'Australia',
-  ''
-  'AU' => 'Australia',
-  
-  'AU' => 'Australia'
-  'AU' => 'A'
-  'AU' = 
-  
-  
-];
 ?>
 
 
@@ -64,11 +23,15 @@ $countries = [
         <input type="text" name="email"><br>
         
         <label for="major">Major:</label><br>
+        <?php foreach($majors as $code => $name): ?>
+          <input type="radio" id="<?= $code; ?>"  name="major" value="<?= $name; ?>"><?= $name; ?><br>
+        <?php endforeach; ?>
+        <!--
         <input type="radio" id="cs"  name="major" value="Computer Science"> Computer Science<br>
         <input type="radio" id="wdd" name="major" value="Web Design and Development">Web Design and Development<br>
         <input type="radio" id="cit" name="major" value="Computer Information Technology">Computer Information Technology<br>
         <input type="radio" id="ce"  name="major" value="Computer Engineering">Computer Engineering<br>
-        
+        -->
         <label for="comments">Comments:</label><br> 
         <textarea name="comments"></textarea> <br>
         
