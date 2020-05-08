@@ -44,13 +44,6 @@ $countries = [
         <?php foreach($countries as $code => $name): ?>
           <input type="checkbox" id="<?= $code; ?>"  name="visited[<?= $code ?>]" value="<?= $name; ?>"><?= $name; ?><br>
         <?php endforeach; ?>
-        <!-- <input type="checkbox" name="visited[na]" value="North America"> <label for="North America">North America</label><br>
-        <input type="checkbox" name="visited[sa]" value="South America"> <label for="South America">South America</label><br>
-        <input type="checkbox" name="visited[eu]" value="Europe"> <label for="Europe">Europe</label><br>
-        <input type="checkbox" name="visited[as]" value="Asia"> <label for="Asia">Asia</label><br>
-        <input type="checkbox" name="visited[au]" value="Australia"> <label for="Australia">Australia</label><br>
-        <input type="checkbox" name="visited[af]" value="Africa"> <label for="Africa">Africa</label><br>
-        <input type="checkbox" name="visited[an]" value="Antarctica"> <label for="Antarctica">Antarctica</label><br> -->
         <input type="submit" value="Send Details">
     </form>
 </body>
