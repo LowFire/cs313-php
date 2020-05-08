@@ -1,0 +1,12 @@
+.container {
+  color: #3d83d9;
+  background: #343252;
+}
+
+.display-4 {
+  font-size: 4rem;
+}
+
+#bold:hover {
+  font-weight: 900;
+}
