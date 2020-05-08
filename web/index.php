@@ -24,7 +24,7 @@
         <div class="card-body">
           <h3 class="card-title display-4">About Me</h3>
           <p class="card-text">I am an avid programmer. My favorite programming language is C++ because it's a fun language to use. I also have some experience in Java and JavaScript. I also love digital art. I own a Wacom tablet that I use to create illustrations in Photoshop. I also like music and play 3 different instruments. Those instruments are guitar, piano and violin. Finally, I love to cook. I prepare a Sunday dinner for my family every week.</p>
-          <a class="btn btn-success d-flex" href="#">Assignments</a>
+          <a class="btn btn-success d-flex" href="https://radiant-springs-66140.herokuapp.com/assignments.html">Assignments</a>
         </div>
       </div>
     </div>
