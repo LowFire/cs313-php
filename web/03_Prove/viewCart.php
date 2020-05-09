@@ -38,18 +38,18 @@
 
           <tbody id="cartContents">
             <?php
-              if ($_SESSION['quantity_plaindog'] > 0)
-                echo "<tr><td><img src=\"hotdog.png\"></td><td>Plain Hotdog</td><td>" . $_SESSION['quantity_plaindog']
-                  . "</td><td>" . $_SESSION['quantity_plaindog'] * $_SESSION['plainDogCost'] . "</td></tr>";
+              if ($_SESSION['quantity_plaindog'] > 0) {
+                printf("<tr><td><img src=\"hotdog.png\"></td>");
+                printf("<td>Plain Hotdog</td>");
+                printf("<td>%2d</td>", $_SESSION['quantity_plaindog']);
+                printf("<td>%5.2f</td></tr>", $_SESSION['plainDogCost'] * $_SESSION['quantity_plaindog']);
+              }
               if ($_SESSION['quantity_spicydog'] > 0)
-              echo "<tr><td><img src=\"spicy_hotdog.png\"></td><td>Spicy Hotdog</td><td>" . $_SESSION['quantity_spicydog']
-              . "</td><td>" . $_SESSION['quantity_spicydog'] * $_SESSION['spicyDogCost'] . "</td></tr>";
+                ;
               if ($_SESSION['quantity_chilidog'] > 0)
-              echo "<tr><td><img src=\"chilidog.png\"></td><td>ChiliDog</td><td>" . $_SESSION['quantity_chilidog']
-              . "</td><td>" . $_SESSION['quantity_chilidog'] * $_SESSION['chiliDogCost'] . "</td></tr>";
+                ;
               if ($_SESSION['quantity_deluxdog'] > 0)
-              echo "<tr><td><img src=\"udeluxdog.png\"></td><td>Ultimate Deluxe Dog</td><td>" . $_SESSION['quantity_deluxdog']
-              . "</td><td>" . $_SESSION['quantity_deluxdog'] * $_SESSION['deluxDogCost'] . "</td></tr>";
+                ;
             ?>
           </tbody>
         </table>
