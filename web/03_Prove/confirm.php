@@ -63,20 +63,27 @@
       <div class="row justify-content-center mt-3">
         <div class="col-4 bg-dark text-white">
           <p class="col d-inline">TOTAL:</p>
-          <p class="col d-inline" id="totalCost">$0.00</p>
+          <p class="col d-inline" id="totalCost"><?php 
+          $totalCost = 0;
+          $totalCost += $_SESSION['quantity_plaindog'] * $_SESSION['plainDogCost'];
+          $totalCost += $_SESSION['quantity_spicydog'] * $_SESSION['spicyDogCost'];
+          $totalCost += $_SESSION['quantity_chilidog'] * $_SESSION['chiliDogCost'];
+          $totalCost += $_SESSION['quantity_deluxdog'] * $_SESSION['deluxDogCost'];
+          printf("$%5.2f", $totalCost);
+          ?></p>
         </div>
       </div>
 
       <div class="row justify-content-center mt-3">
         <div class="col-8 bg-dark text-white">
           <h5>Address:</h5>
-          <p id="address"><?php printf("%s", $_POST['address']);?></p>
+          <p id="address"><?php echo $_POST['address'];?></p>
           <h5>City:</h5>
-          <p id="city"><?php printf("%s", $_POST['city']);?></p>
+          <p id="city"><?php echo $_POST['city'];?></p>
           <h5>Country:</h5>
-          <p id="country"><?php printf("%s", $_POST['country']);?></p>
+          <p id="country"><?php echo $_POST['country'];?></p>
           <h5>Zip Code:</h>
-          <p id="zip"><?php printf("%s", $_POST['zip']);?></p>
+          <p id="zip"><?php echo $_POST['zip'];?></p>
         </div>
       </div>
 
