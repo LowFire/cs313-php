@@ -1,3 +1,16 @@
+<?php
+  session_start();
+
+  $_SESSION['quantity_plaindog'] = $_POST['quantity_plaindog'];
+  $_SESSION['quantity_spicydog'] = $_POST['quantity_spicydog'];
+  $_SESSION['quantity_chilidog'] = $_POST['quantity_chilidog'];
+  $_SESSION['quantity_deluxdog'] = $_POST['quantity_deluxdog'];
+  $_SESSION['plainDogCost'] = 3;
+  $_SESSION['spicyDogCost'] = 3.5;
+  $_SESSION['chiliDogCost'] = 5;
+  $_SESSION['deluxDogCost'] = 6.5;
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -21,10 +34,39 @@
           </thead>
 
           <tbody id="cartContents">
-
+            <?php
+                if ($_SESSION['quantity_plaindog'] > 0) {
+                  printf("<tr><td><img src=\"hotdog.png\"></td>");
+                  printf("<td>Plain Hotdog</td>");
+                  printf("<td>%2d</td>", $_SESSION['quantity_plaindog']);
+                  printf("<td>$%5.2f</td></tr>", $_SESSION['plainDogCost'] * $_SESSION['quantity_plaindog']);
+                }
+                if ($_SESSION['quantity_spicydog'] > 0) {
+                  printf("<tr><td><img src=\"spicy_hotdog.png\"></td>");
+                  printf("<td>Spicy Hotdog</td>");
+                  printf("<td>%2d</td>", $_SESSION['quantity_spicydog']);
+                  printf("<td>$%5.2f</td></tr>", $_SESSION['spicyDogCost'] * $_SESSION['quantity_spicydog']);
+                }
+                if ($_SESSION['quantity_chilidog'] > 0) {
+                  printf("<tr><td><img src=\"chilidog.png\"></td>");
+                  printf("<td>ChiliDog</td>");
+                  printf("<td>%2d</td>", $_SESSION['quantity_chilidog']);
+                  printf("<td>$%5.2f</td></tr>", $_SESSION['chiliDogCost'] * $_SESSION['quantity_chilidog']);
+                }
+                if ($_SESSION['quantity_deluxdog'] > 0) {
+                  printf("<tr><td><img src=\"udeluxdog.png\"></td>");
+                  printf("<td>Ultimate Deluxe Dog</td>");
+                  printf("<td>%2d</td>", $_SESSION['quantity_deluxdog']);
+                  printf("<td>$%5.2f</td></tr>", $_SESSION['deluxDogCost'] * $_SESSION['quantity_deluxdog']);
+                }
+              ?>
           </tbody>
         </table>
-        <p class="d-none" id="emptyCart">Your cart is empty</p>
+        <p><?php 
+          if ($_SESSION['quantity_plaindog'] == 0 && $_SESSION['quantity_spicydog'] == 0 && $_SESSION['quantity_chilidog'] == 0
+          && $_SESSION['quantity_deluxdog'] == 0)
+              printf("Your cart is empty");
+        ?></p>
       </div>
 
       <div class="row justify-content-center mt-3">
