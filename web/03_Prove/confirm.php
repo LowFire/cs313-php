@@ -1,14 +1,5 @@
 <?php
   session_start();
-
-  $_SESSION['quantity_plaindog'] = $_POST['quantity_plaindog'];
-  $_SESSION['quantity_spicydog'] = $_POST['quantity_spicydog'];
-  $_SESSION['quantity_chilidog'] = $_POST['quantity_chilidog'];
-  $_SESSION['quantity_deluxdog'] = $_POST['quantity_deluxdog'];
-  $_SESSION['plainDogCost'] = 3;
-  $_SESSION['spicyDogCost'] = 3.5;
-  $_SESSION['chiliDogCost'] = 5;
-  $_SESSION['deluxDogCost'] = 6.5;
 ?>
 
 <!DOCTYPE html>
@@ -79,13 +70,13 @@
       <div class="row justify-content-center mt-3">
         <div class="col-8 bg-dark text-white">
           <h5>Address:</h5>
-          <p id="address"></p>
+          <p id="address"><?php printf("%s", $_POST['address']);?></p>
           <h5>City:</h5>
-          <p id="city"></p>
+          <p id="city"><?php printf("%s", $_POST['city']);?></p>
           <h5>Country:</h5>
-          <p id="country"></p>
+          <p id="country"><?php printf("%s", $_POST['country']);?></p>
           <h5>Zip Code:</h>
-          <p id="zip"></p>
+          <p id="zip"><?php printf("%s", $_POST['zip']);?></p>
         </div>
       </div>
 
