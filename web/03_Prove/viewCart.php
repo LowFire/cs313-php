@@ -52,7 +52,7 @@
           $totalCost += $_SESSION['quantity_spicydog'] * $_SESSION['spicyDogCost'];
           $totalCost += $_SESSION['quantity_chilidog'] * $_SESSION['chiliDogCost'];
           $totalCost += $_SESSION['quantity_deluxdog'] * $_SESSION['deluxDogCost'];
-          printf("%f5.2", $totalCost);
+          printf("%5.2f", $totalCost);
           ?></p>
         </div>
       </div>
