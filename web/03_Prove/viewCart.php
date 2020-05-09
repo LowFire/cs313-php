@@ -65,7 +65,11 @@
             ?>
           </tbody>
         </table>
-        <p class="d-none" id="emptyCart">Your cart is empty</p>
+        <p><?php 
+          if ($_SESSION['quantity_plaindog'] == 0 && $_SESSION['quantity_spicydog'] == 0 && $_SESSION['quantity_chilidog'] == 0
+          && $_SESSION['quantity_deluxdog'] == 0)
+              printf("Your cart is empty");
+        ?></p>
       </div>
 
       <div class="row mt-3">
