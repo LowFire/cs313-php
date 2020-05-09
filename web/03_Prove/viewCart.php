@@ -37,7 +37,16 @@
           </thead>
 
           <tbody id="cartContents">
-
+            <?php
+              if ($_SESSION['quantity_plaindog'] > 0)
+                echo "<tr><td><img src=\"hotdog.png\"><td><td><td><tr>";
+              if ($_SESSION[''])
+                ;
+              if ($_SESSION[''])
+                ;
+              if ($_SESSION[''])
+                ;
+            ?>
           </tbody>
         </table>
         <p class="d-none" id="emptyCart">Your cart is empty</p>
@@ -52,7 +61,7 @@
           $totalCost += $_SESSION['quantity_spicydog'] * $_SESSION['spicyDogCost'];
           $totalCost += $_SESSION['quantity_chilidog'] * $_SESSION['chiliDogCost'];
           $totalCost += $_SESSION['quantity_deluxdog'] * $_SESSION['deluxDogCost'];
-          printf("%5.2f", $totalCost);
+          printf("$%5.2f", $totalCost);
           ?></p>
         </div>
       </div>
