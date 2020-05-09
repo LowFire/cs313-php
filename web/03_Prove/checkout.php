@@ -16,7 +16,7 @@
       </div>
 
       <div class="row justify-content-center">
-        <form action="confirm.php" method="GET" class="col-8 form">
+        <form action="confirm.php" method="POST" class="col-8 form">
           <label for="address">Address</label>
           <input type="text" class="form-control" name="address">
           <label for="city">City</label>
@@ -26,12 +26,9 @@
           <label for="zip">Zip Code</label>
           <input type="text" class="form-control col-sm-4 col-md-3 
           col-lg-2" name="zip">
+          <button type="submit" class="btn btn-outline-success btn-lg">Confirm</a>
+          <a href="viewCart.php" class="btn btn-outline-success btn-lg ml-1">Back</a>
         </form>
-      </div>
-
-      <div class="row justify-content-center">
-        <a href="confirm.php" class="btn btn-outline-success btn-lg">Confirm</a>
-        <a href="viewCart.php" class="btn btn-outline-success btn-lg ml-1">Back</a>
       </div>
     </div>
   </body>
