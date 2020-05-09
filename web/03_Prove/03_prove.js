@@ -6,7 +6,7 @@ addDeluxDog = document.getElementById("addDeluxDog");
 test = document.getElementById("test");
 
 addPlainDog.addEventListener("click", function() {
-    test.innerHTML = "<?php echo \"<p>test<p>\";?>";
+    test.innerHTML = "<p><?php echo \"test\";?><p>";
 });
 
 addSpicyDog.addEventListener("click", function() {
