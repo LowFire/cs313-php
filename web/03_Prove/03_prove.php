@@ -23,7 +23,7 @@
       
       <div class="row justify-content-center">
         <div class="col-8">
-          <form action="checkout.php" class="form">
+          <form action="checkout.php" method="POST" class="form">
 
             <table class="table table-hover table-dark">
               <thead>
