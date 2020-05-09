@@ -18,14 +18,14 @@
       <div class="row justify-content-center">
         <form action="confirm.php" method="POST" class="col-8 form">
           <label for="address">Address</label>
-          <input type="text" class="form-control" id="address" name="address">
+          <input type="text" class="form-control" name="address">
           <label for="city">City</label>
-          <input type="text" class="form-control" id="city" name="city">
+          <input type="text" class="form-control" name="city">
           <label for="country">Country</label>
-          <input type="text" class="form-control" id="country" name="country">
+          <input type="text" class="form-control" name="country">
           <label for="zip">Zip Code</label>
           <input type="text" class="form-control col-sm-4 col-md-3 
-          col-lg-2" id="zip" name="zip">
+          col-lg-2" name="zip">
         </form>
       </div>
 

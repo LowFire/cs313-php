@@ -82,7 +82,7 @@
           <p id="city"><?php echo $_POST['city'];?></p>
           <h5>Country:</h5>
           <p id="country"><?php echo $_POST['country'];?></p>
-          <h5>Zip Code:</h>
+          <h5>Zip Code:</h5>
           <p id="zip"><?php echo $_POST['zip'];?></p>
         </div>
       </div>
