@@ -42,14 +42,26 @@
                 printf("<tr><td><img src=\"hotdog.png\"></td>");
                 printf("<td>Plain Hotdog</td>");
                 printf("<td>%2d</td>", $_SESSION['quantity_plaindog']);
-                printf("<td>%5.2f</td></tr>", $_SESSION['plainDogCost'] * $_SESSION['quantity_plaindog']);
+                printf("<td>$%5.2f</td></tr>", $_SESSION['plainDogCost'] * $_SESSION['quantity_plaindog']);
               }
-              if ($_SESSION['quantity_spicydog'] > 0)
-                ;
-              if ($_SESSION['quantity_chilidog'] > 0)
-                ;
-              if ($_SESSION['quantity_deluxdog'] > 0)
-                ;
+              if ($_SESSION['quantity_spicydog'] > 0) {
+                printf("<tr><td><img src=\"spicy_hotdog.png\"></td>");
+                printf("<td>Spicy Hotdog</td>");
+                printf("<td>%2d</td>", $_SESSION['quantity_spicydog']);
+                printf("<td>$%5.2f</td></tr>", $_SESSION['spicyDogCost'] * $_SESSION['quantity_spicydog']);
+              }
+              if ($_SESSION['quantity_chilidog'] > 0) {
+                printf("<tr><td><img src=\"chilidog.png\"></td>");
+                printf("<td>ChiliDog</td>");
+                printf("<td>%2d</td>", $_SESSION['quantity_chilidog']);
+                printf("<td>$%5.2f</td></tr>", $_SESSION['chiliDogCost'] * $_SESSION['quantity_chilidog']);
+              }
+              if ($_SESSION['quantity_deluxdog'] > 0) {
+                printf("<tr><td><img src=\"udeluxdog.png\"></td>");
+                printf("<td>Ultimate Deluxe Dog</td>");
+                printf("<td>%2d</td>", $_SESSION['quantity_deluxdog']);
+                printf("<td>$%5.2f</td></tr>", $_SESSION['deluxDogCost'] * $_SESSION['quantity_deluxdog']);
+              }
             ?>
           </tbody>
         </table>
