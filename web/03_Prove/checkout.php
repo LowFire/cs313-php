@@ -27,6 +27,13 @@
         </form>
       </div>
 
+      <?php
+        echo "quantity_plaindog: " . $_POST['quantity_plaindog'];
+        echo "quantity_spicydog: " . $_post['quantity_spicydog'];
+        echo "quantity_chilidog: " . $_POST['quantity_chilidog'];
+        echo "quantity_deluxdog: " . $_POST['quantity_deluxdog'];
+      ?>
+
       <div class="row justify-content-center">
         <a href="https://radiant-springs-66140.herokuapp.com/03_Prove/confirm.html" class="btn btn-outline-success btn-lg">Confirm</a>
         <a href="https://radiant-springs-66140.herokuapp.com/03_Prove/viewCart.html" class="btn btn-outline-success btn-lg ml-1">Back</a>
