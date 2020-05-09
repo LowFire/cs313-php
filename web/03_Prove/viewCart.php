@@ -1,6 +1,16 @@
 <?php
   session_start();
+
+  $_SESSION['quantity_plaindog'] = $_POST['quantity_plaindog'];
+  $_SESSION['quantity_spicydog'] = $_POST['quantity_spicydog'];
+  $_SESSION['quantity_chilidog'] = $_POST['quantity_chilidog'];
+  $_SESSION['quantity_deluxdog'] = $_POST['quantity_deluxdog'];
+  $_SESSION['plainDogCost'] = 3;
+  $_SESSION['spicyDogCost'] = 3.5;
+  $_SESSION['chiliDogCost'] = 5;
+  $_SESSION['deluxDogCost'] = 6.5;
 ?>
+
 
 <!DOCTYPE html>
 <html>
@@ -36,7 +46,14 @@
       <div class="row mt-3">
         <div class="col-4 bg-dark">
           <p class="col text-white totalCost d-inline">TOTAL:</p>
-          <p class="col text-white d-inline" id="totalCost">$0.00</p>
+          <p class="col text-white d-inline" id="totalCost"><?php 
+          $totalCost = 0;
+          $totalCost += $_SESSION['quantity_plaindog'] * $_SESSION['plainDogCost'];
+          $totalCost += $_SESSION['quantity_spicydog'] * $_SESSION['spicyDogCost'];
+          $totalCost += $_SESSION['quantity_chilidog'] * $_SESSION['chiliDogCost'];
+          $totalCost += $_SESSION['quantity_deluxdog'] * $_SESSION['deluxDogCost'];
+          printf("%f5.2", $totalCost);
+          ?></p>
         </div>
       </div>
 
