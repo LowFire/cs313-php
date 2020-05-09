@@ -77,7 +77,7 @@
       <div class="row justify-content-center mt-3">
         <div class="col-8 bg-dark text-white">
           <h5>Address:</h5>
-          <p id="address"><?php echo test;?></p>
+          <p id="address"><?php echo "test";?></p>
           <h5>City:</h5>
           <p id="city"><?php echo $_POST['city'];?></p>
           <h5>Country:</h5>
