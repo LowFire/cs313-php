@@ -1,6 +1,4 @@
-<?php
-  session_start();
-?>
+
 
 <!DOCTYPE html>
 <html>
@@ -23,7 +21,7 @@
       
       <div class="row justify-content-center">
         <div class="col-8">
-          <form action="checkout.php" method="POST" class="form">
+          <form action="viewCart.php" method="POST" class="form">
 
             <table class="table table-hover table-dark">
               <thead>

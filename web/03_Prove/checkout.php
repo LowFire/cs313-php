@@ -28,8 +28,8 @@
       </div>
 
       <div class="row justify-content-center">
-        <a href="https://radiant-springs-66140.herokuapp.com/03_Prove/confirm.html" class="btn btn-outline-success btn-lg">Confirm</a>
-        <a href="https://radiant-springs-66140.herokuapp.com/03_Prove/viewCart.html" class="btn btn-outline-success btn-lg ml-1">Back</a>
+        <a href="confirm.php" class="btn btn-outline-success btn-lg">Confirm</a>
+        <a href="viewCart.php" class="btn btn-outline-success btn-lg ml-1">Back</a>
       </div>
     </div>
   </body>

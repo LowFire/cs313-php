@@ -49,7 +49,7 @@
 
       <div class="row justify-content-center mt-3">
         <a href="https://radiant-springs-66140.herokuapp.com/03_Prove/orderplaced.html" class="btn btn-outline-success btn-lg">Place Order</a>
-        <a href="https://radiant-springs-66140.herokuapp.com/03_Prove/checkout.html" class="btn btn-outline-success btn-lg ml-1">Back</a>
+        <a href="checkout.php" class="btn btn-outline-success btn-lg ml-1">Back</a>
       </div>
     </div>
   </body>
