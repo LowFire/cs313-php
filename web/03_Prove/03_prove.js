@@ -1,22 +1,25 @@
 
-addPlainDog = document.getElementById("addPlainDog");
-addSpicyDog = document.getElementById("addSpicyDog");
-addChiliDog = document.getElementById("addChiliDog");
-addDeluxDog = document.getElementById("addDeluxDog");
+
+
+// addPlainDog = document.getElementById("addPlainDog");
+// addSpicyDog = document.getElementById("addSpicyDog");
+// addChiliDog = document.getElementById("addChiliDog");
+// addDeluxDog = document.getElementById("addDeluxDog");
 test = document.getElementById("test");
+test.innerHTML = "<p><?php echo \"test\";?><p>";
 
-addPlainDog.addEventListener("click", function() {
-    test.innerHTML = "<p><?php echo \"test\";?><p>";
-});
+// addPlainDog.addEventListener("click", function() {
+//     test.innerHTML = "<p><?php echo \"test\";?><p>";
+// });
 
-addSpicyDog.addEventListener("click", function() {
+// addSpicyDog.addEventListener("click", function() {
 
-});
+// });
 
-addChiliDog.addEventListener("click", function() {
+// addChiliDog.addEventListener("click", function() {
     
-});
+// });
 
-addDeluxDog.addEventListener("click", function() {
+// addDeluxDog.addEventListener("click", function() {
     
-});
+// });
