@@ -18,54 +18,72 @@
     <div class="container">
 
       <div class="row justify-content-center text-center">
-        <h2 class="col-sm-8">Hot Dog Order Form</h2>
+        <h2 class="col-sm-8 jumbotron bg-dark text-white">Hot Dog Order Form</h2>
       </div>
       
       <div class="row justify-content-center">
-        <form action="" method="POST" class="col-8">
-          
-          <table class="table table-hover">
-            <thead class="table-info">
+        <div class="col-8">
+          <table class="table table-hover table-dark">
+            <thead>
               <th></th>
               <th>Item</th>
               <th>Cost</th>
               <th>Quantity</th>
+              <th></th>
             </thead>
             
             <tbody>
               <tr>
                 <td><img src="hotdog.png"></td>
                 <td>Plain Hotdog</td>
-                <td></td>
-                <td></td>
+                <td>$3.00</td>
+                <td>
+                  <input type="number" class="form-control" name="quantity_plaindog">
+                </td>
+                <td><button class="btn btn-outline-primary btn-sm" id="addPlainDog">
+                  <i class="fas fa-plus"></i></button></td>
               </tr>
               <tr>
-                <td></td>
+                <td><img src="spicy_hotdog.png"></td>
                 <td>Spicy Hotdog</td>
-                <td></td>
-                <td></td>
+                <td>$3.50</td>
+                <td>
+                  <input type="number" class="form-control" name="quantity_spicydog">
+                </td>
+                <td><button class="btn btn-outline-primary btn-sm" id="addSpicyDog">
+                  <i class="fas fa-plus"></i></button></td>
               </tr>
               <tr>
-                <td></td>
+                <td><img src="chilidog.png"></td>
                 <td>ChiliDog</td>
-                <td></td>
-                <td></td>
+                <td>$5.00</td>
+                <td>
+                  <input type="number" class="form-control" name="quantity_chilidog">
+                </td>
+                <td><button class="btn btn-outline-primary btn-sm" id="addChiliDog">
+                  <i class="fas fa-plus"></i></button></td>
               </tr>
               <tr>
-                <td></td>
+                <td><img src="udeluxdog.png"></td>
                 <td>Ultimate Deluxe Dog</td>
-                <td></td>
-                <td></td>
+                <td>$6.50</td>
+                <td>
+                  <input type="number" class="form-control" name="quantity_deluxdog">
+                </td>
+                <td><button class="btn btn-outline-primary btn-sm" id="addDeluxDog">
+                  <i class="fas fa-plus"></i></button></td>
               </tr>
             </tbody>
           </table>
           
-          <a href="#" class="btn btn-success">Cart 
-            <i class="fas fa-shopping-cart"></i></a>
+          <a href="https://radiant-springs-66140.herokuapp.com/03_Prove/viewCart.html" class="btn btn-outline-success btn-lg">
+            Cart <i class="fas fa-shopping-cart"></i></a>
 
-        </form>
+        </div>
       </div>
     </div>
-
+    
+    <div id="test"></div>
+    <script type="text/javascript" src="03_prove.js"></script>
   </body>
 </html>
