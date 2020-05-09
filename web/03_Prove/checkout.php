@@ -26,8 +26,10 @@
           <label for="zip">Zip Code</label>
           <input type="text" class="form-control col-sm-4 col-md-3 
           col-lg-2" name="zip">
-          <button type="submit" class="btn btn-outline-success btn-lg">Confirm</a>
-          <a href="viewCart.php" class="btn btn-outline-success btn-lg ml-1">Back</a>
+          <div class="row mt-4">
+            <button type="submit" class="btn btn-outline-success btn-lg">Confirm</button>
+            <a href="viewCart.php" class="btn btn-outline-success btn-lg ml-1">Back</a>
+          </div>
         </form>
       </div>
     </div>
