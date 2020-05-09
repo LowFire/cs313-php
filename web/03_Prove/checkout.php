@@ -16,18 +16,16 @@
       </div>
 
       <div class="row justify-content-center">
-        <form action="confirm.php" method="POST" class="col-8">
-          <div class="form-group">
-            <label for="address">Address</label>
-            <input type="text" class="form-control" id="address" name="address">
-            <label for="city">City</label>
-            <input type="text" class="form-control" id="city" name="city">
-            <label for="country">Country</label>
-            <input type="text" class="form-control" id="contry" name="country">
-            <label for="zip">Zip Code</label>
-            <input type="text" class="form-control col-sm-4 col-md-3 
-            col-lg-2" id="zip" name="zip">
-          </div>
+        <form action="confirm.php" method="POST" class="col-8 form">
+          <label for="address">Address</label>
+          <input type="text" class="form-control" id="address" name="address">
+          <label for="city">City</label>
+          <input type="text" class="form-control" id="city" name="city">
+          <label for="country">Country</label>
+          <input type="text" class="form-control" id="country" name="country">
+          <label for="zip">Zip Code</label>
+          <input type="text" class="form-control col-sm-4 col-md-3 
+          col-lg-2" id="zip" name="zip">
         </form>
       </div>
 
