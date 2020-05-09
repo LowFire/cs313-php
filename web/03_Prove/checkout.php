@@ -29,7 +29,7 @@
 
       <?php
         echo "quantity_plaindog: " . $_POST['quantity_plaindog'];
-        echo "quantity_spicydog: " . $_post['quantity_spicydog'];
+        echo "quantity_spicydog: " . $_POST['quantity_spicydog'];
         echo "quantity_chilidog: " . $_POST['quantity_chilidog'];
         echo "quantity_deluxdog: " . $_POST['quantity_deluxdog'];
       ?>
