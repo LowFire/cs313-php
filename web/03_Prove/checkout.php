@@ -16,7 +16,7 @@
       </div>
 
       <div class="row justify-content-center">
-        <form action="confirm.php" method="POST" class="col-8 form">
+        <form action="confirm.php" method="GET" class="col-8 form">
           <label for="address">Address</label>
           <input type="text" class="form-control" name="address">
           <label for="city">City</label>
