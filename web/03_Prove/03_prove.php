@@ -11,6 +11,7 @@
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
     crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/2519c97874.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="03_prove.js"></script>
   </head>
   
   <body>
@@ -84,6 +85,5 @@
     </div>
     
     <div id="test"></div>
-    <script type="text/javascript" src="03_prove.js"></script>
   </body>
 </html>
