@@ -24,7 +24,7 @@ echo '<p>The username is '. $_POST['username'] . '</p>';
 try
 {
     $stmnt = $db->prepare('SELECT user_id FROM users WHERE username=:username');
-    $stmnt->execute(array(':username' => $username));
+    $stmnt->execute(array(':username' => $_POST['username']));
     $rows = $stmnt->fetchAll(PDO::FETCH_ASSOC);
     print_r($rows);
     $id = $rows[0][0];
