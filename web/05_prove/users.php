@@ -40,17 +40,17 @@ $rows = $stmnt->fetchAll(PDO::FETCH_ASSOC);
           <th>Calendar Link</th>
         </thead>
         <tbody>
-          <form action="calendarEvents.php" method="POST">
           <?php
             foreach ($rows as $row) {
+              echo '<form action="calendarEvents.php" method="POST">';
               echo '<tr>';
               echo '<td><input type="text" name="username" value="' . $row['username'] . '" disabled></td>';
               echo '<td><input type="text" name="password" value="' . $row['password'] . '" disabled></td>';
               echo '<td><button type="submit">Calendar</a></td>';
               echo '</tr>';
+              echo '</form>';
             }
           ?>
-          </form>
         </tbody>
       </table>
   </body>

@@ -21,8 +21,6 @@ catch (PDOException $ex)
   die();
 }
 
-echo $_POST['username'];
-
 try
 {
     $stmnt = $db->prepare('SELECT user_id FROM users WHERE username=\':username\'');
