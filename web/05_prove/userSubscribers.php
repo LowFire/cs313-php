@@ -49,11 +49,14 @@ $users = $stmnt->fetchAll(PDO::FETCH_ASSOC);
             echo '<tr>';
             echo '<td>' . $user['username'] . '</td>';
             echo '<td>';
-            foreach($subscribers as $subscriber) {
-              echo $subscriber['username'];
-              if (key($subscribers != $lastKey))
-                echo ', ';
-            }
+            if (empty($subscribers))
+              echo 'None';
+            else
+              foreach($subscribers as $subscriber) {
+                echo $subscriber['username'];
+                if (key($subscribers) != $lastKey)
+                  echo ', ';
+              }
             echo '</td>';
             echo '</tr>';
           }
