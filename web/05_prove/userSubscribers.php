@@ -56,6 +56,7 @@ $users = $stmnt->fetchAll(PDO::FETCH_ASSOC);
               foreach($subscribers as $subscriber) {
                 echo $subscriber['username'];
                 echo key($subscribers);
+                echo $lastkey;
                 //if ()
                   echo ', ';
               }
