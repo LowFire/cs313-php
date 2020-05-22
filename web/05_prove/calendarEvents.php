@@ -43,18 +43,20 @@ catch (PDOException $ex)
 <html>
   <head>
     <title>Calendar Events</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   </head>
   
   <body>
-      <table>
-          <thead>
-              <th>Event Name</th>
-              <th>Event Description</th>
-              <th>Event Date</th>
-              <th>Event Time</th>
-          </thead>
-          <tbody>
-              <?php
+      <div class="container">
+          <table class="table table-striped">
+              <thead>
+                  <th>Event Name</th>
+                  <th>Event Description</th>
+                  <th>Event Date</th>
+                  <th>Event Time</th>
+                </thead>
+                <tbody>
+                    <?php
                 foreach ($rows as $row) {
                     echo '<tr>';
                     echo '<td>' . $row['eventname'] . '</td>';
@@ -63,8 +65,9 @@ catch (PDOException $ex)
                     echo '<td>' . $row['eventhr'] . ':' . $row['eventmin'] . ' ' . $row['eventabbriv'] . '</td>';
                     echo '</tr>';
                 }
-              ?>
-          </tbody>
-      </table>
-  </body>
+                ?>
+                </tbody>
+            </table>
+        </div>
+    </body>
 </html>
