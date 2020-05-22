@@ -40,7 +40,7 @@ $rows = $stmnt->fetchAll(PDO::FETCH_ASSOC);
           <th>Calendar Link</th>
         </thead>
         <tbody>
-          <form action="calendarEvents.php" method="POST"></form>
+          <form action="calendarEvents.php" method="POST">
           <?php
             foreach ($rows as $row) {
               echo '<tr>';
@@ -50,6 +50,7 @@ $rows = $stmnt->fetchAll(PDO::FETCH_ASSOC);
               echo '</tr>';
             }
           ?>
+          </form>
         </tbody>
       </table>
   </body>
