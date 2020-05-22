@@ -25,7 +25,7 @@ $stmnt = $db->prepare('SELECT user_id FROM users WHERE username=:username');
 $stmnt->bindValue(':username', $_POST['username'], PDO::PARAM_STR);
 $stmnt->execute();
 $rows = $stmnt->fetchAll(PDO::FETCH_ASSOC);
-$id = rows[0]['user_id'];
+$id = $rows[0]['user_id'];
 $stmnt = $db->prepare('SELECT * FROM calendar WHERE user_id = ' . $id);
 $stmnt->execute();
 $rows = $stmnt->fetchAll(PDO::FETCH_ASSOC);
