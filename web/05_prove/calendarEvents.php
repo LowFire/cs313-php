@@ -26,7 +26,8 @@ $stmnt->bindValue(':username', $_POST['username'], PDO::PARAM_STR);
 $stmnt->execute();
 $rows = $stmnt->fetchAll(PDO::FETCH_ASSOC);
 $id = $rows[0]['user_id'];
-$stmnt = $db->prepare('SELECT * FROM calendar WHERE user_id = ' . $id);
+$stmnt = $db->prepare('SELECT * FROM calendar WHERE user_id=:user_id');
+$stmnt->bindValue(':user_id', $id, PDO::PARAM_INT);
 $stmnt->execute();
 $rows = $stmnt->fetchAll(PDO::FETCH_ASSOC);
 ?>
