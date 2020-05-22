@@ -25,7 +25,7 @@ try
 {
     $stmnt = $db->prepare('SELECT user_id FROM users WHERE username=:username');
     $stmnt->execute(array(':username' => $username));
-    $rows = $stmnt->fetchAll(PDO::FETCH_ASSOC);
+    $rows = $stmnt->fetchAll();
     echo '<p> The user ID is ' . $rows[0]['user_id'] . '</p>';
     $id = $rows[0][0];
     $stmnt = $db->prepare('SELECT * FROM calendar WHERE user_id=:user_id');
