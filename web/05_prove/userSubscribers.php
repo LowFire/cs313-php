@@ -54,7 +54,7 @@ $users = $stmnt->fetchAll(PDO::FETCH_ASSOC);
               echo 'None';
             else
               while($subscriber = current($subscribers)) {
-                echo $subscriber['value']['username'];
+                echo $subscriber['username'];
                 if (key($subscribers) != $lastkey)
                   echo ', ';
                 next($subscribers);
