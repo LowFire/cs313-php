@@ -41,11 +41,13 @@ $rows = $stmnt->fetchAll(PDO::FETCH_ASSOC);
         </thead>
         <tbody>
           <?php
-            echo '<tr>';
-            echo '<td>' . $rows['username'] . '</td>';
-            echo '<td>' . $rows['password'] . '</td>';
-            echo '<td><a href=\"calendarEvents.php\">Calendar</a></td>';
-            echo '</tr>';
+            foreach ($rows as $row) {
+              echo '<tr>';
+              echo '<td>' . $row['username'] . '</td>';
+              echo '<td>' . $row['password'] . '</td>';
+              echo '<td><a href=\"calendarEvents.php\">Calendar</a></td>';
+              echo '</tr>';
+            }
           ?>
         </tbody>
       </table>
