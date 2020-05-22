@@ -45,7 +45,6 @@ $users = $stmnt->fetchAll(PDO::FETCH_ASSOC);
             $stmnt = $db->prepare('SELECT username FROM users, subscribers WHERE user_id=user_sub_id AND subscribee_id=:id');
             $stmnt->execute(array(':id' => $user['user_id']));
             $subscribers = $stmnt->fetchAll(PDO::FETCH_ASSOC);
-            $lastKey = array_key_last($subscribers);
 
             echo '<tr>';
             echo '<td>' . $user['username'] . '</td>';
@@ -55,7 +54,7 @@ $users = $stmnt->fetchAll(PDO::FETCH_ASSOC);
             else
               foreach($subscribers as $subscriber) {
                 echo $subscriber['username'];
-                if (key($subscribers) != $lastKey)
+                if (!is_null(key($subscribers) + 1))
                   echo ', ';
               }
             echo '</td>';
