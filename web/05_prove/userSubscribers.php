@@ -59,6 +59,7 @@ $users = $stmnt->fetchAll(PDO::FETCH_ASSOC);
                 echo $lastkey;
                 //if ()
                   echo ', ';
+                next($subsribers);
               }
             echo '</td>';
             echo '</tr>';
