@@ -26,8 +26,7 @@ try
     $stmnt = $db->prepare('SELECT user_id FROM users WHERE username=:username');
     $stmnt->execute(array(':username' => $_POST['username']));
     $rows = $stmnt->fetchAll(PDO::FETCH_ASSOC);
-    print_r($rows);
-    $id = $rows[0][0];
+    $id = $rows[0]['user_id'];
     $stmnt = $db->prepare('SELECT * FROM calendar WHERE user_id=:user_id');
     $stmnt->bindValue(':user_id', $id, PDO::PARAM_INT);
     $stmnt->execute();
