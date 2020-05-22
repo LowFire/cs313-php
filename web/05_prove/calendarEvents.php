@@ -20,7 +20,7 @@ catch (PDOException $ex)
   echo 'Error!: ' . $ex->getMessage();
   die();
 }
-
+echo '<p>The username is '. $_POST['username'] . '</p>';
 try
 {
     $stmnt = $db->prepare('SELECT user_id FROM users WHERE username=\':username\'');
