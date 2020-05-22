@@ -44,8 +44,8 @@ $rows = $stmnt->fetchAll(PDO::FETCH_ASSOC);
             foreach ($rows as $row) {
               echo '<form action="calendarEvents.php" method="POST">';
               echo '<tr>';
-              echo '<td><input type="text" name="username" value="' . $row['username'] . '" disabled></td>';
-              echo '<td><input type="text" name="password" value="' . $row['password'] . '" disabled></td>';
+              echo '<td><input type="text" name="username" value="' . $row['username'] . '"></td>';
+              echo '<td><input type="text" name="password" value="' . $row['password'] . '"></td>';
               echo '<td><button type="submit">Calendar</a></td>';
               echo '</tr>';
               echo '</form>';
