@@ -21,16 +21,18 @@ catch (PDOException $ex)
   die();
 }
 
+echo $_POST['username'];
+
 try
 {
     $stmnt = $db->prepare('SELECT user_id FROM users WHERE username=\':username\'');
     $stmnt->bindValue(':username', $_POST['username'], PDO::PARAM_STR);
-    //$stmnt->execute();
+    $stmnt->execute();
     $rows = $stmnt->fetchAll(PDO::FETCH_ASSOC);
     $id = $rows[0]['user_id'];
     $stmnt = $db->prepare('SELECT * FROM calendar WHERE user_id=:user_id');
     $stmnt->bindValue(':user_id', $id, PDO::PARAM_INT);
-    //$stmnt->execute();
+    $stmnt->execute();
     $rows = $stmnt->fetchAll(PDO::FETCH_ASSOC);
 }
 catch (PDOException $ex)
