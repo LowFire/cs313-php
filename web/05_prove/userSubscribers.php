@@ -53,13 +53,12 @@ $users = $stmnt->fetchAll(PDO::FETCH_ASSOC);
             if (empty($subscribers))
               echo 'None';
             else
-              foreach($subscribers as $subscriber) {
+              while($subscriber = each($subscribers)) {
                 echo $subscriber['username'];
                 echo key($subscribers);
                 echo $lastkey;
-                //if ()
+                if (key($subscribers) != $lastkey)
                   echo ', ';
-                next($subsribers);
               }
             echo '</td>';
             echo '</tr>';
