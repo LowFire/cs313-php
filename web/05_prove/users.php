@@ -21,7 +21,7 @@ catch (PDOException $ex)
   die();
 }
 
-$stmnt = $db->prepare('SELECT * FROM users');
+$stmnt = $db->prepare('SELECT username, password FROM users');
 $stmnt->execute();
 $rows = $stmnt->fetchAll(PDO::FETCH_ASSOC);
 ?>
