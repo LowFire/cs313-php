@@ -54,7 +54,8 @@ $users = $stmnt->fetchAll(PDO::FETCH_ASSOC);
             else
               foreach($subscribers as $subscriber) {
                 echo $subscriber['username'];
-                if (!is_null(key($subscribers) + 1))
+                echo key($subscribers);
+                //if ()
                   echo ', ';
               }
             echo '</td>';
