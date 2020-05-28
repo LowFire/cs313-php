@@ -9,7 +9,7 @@
         VALUES (:eventname, :eventdesc, :eventdate, :eventhr, :eventmin, :eventabbriv, :user_id)");
 
         //$stmt->bindValue(":eventname", $_POST['eventName'], PDO::PARAM_STR);
-        $stmt->bindValue(":eventdesc", $_POST['eventDesc'], PDO::PARAM_STR);
+        //$stmt->bindValue(":eventdesc", $_POST['eventDesc'], PDO::PARAM_STR);
         $stmt->bindValue(":eventdate", $_POST['date'], PDO::PARAM_STR);
         $stmt->bindValue(":eventhr", intval($_POST['hr']), PDO::PARAM_INT);
         $stmt->bindValue(":eventmin", intval($_POST['min']), PDO::PARAM_INT);
