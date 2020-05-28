@@ -12,7 +12,6 @@
       $stmt->bindValue(":password", $_POST['password'], PDO::PARAM_STR);
       $stmt->execute();
       $userId = $stmt->fetchAll(PDO::FETCH_ASSOC);
-      var_dump($userId);
     }
     catch (PDOException $ex)
     {
@@ -20,12 +19,12 @@
       die();
     }
 
-    // if (!isset($userId)) {
-    //   $success = false;
-    // } else {
-    //   $_SESSION['user_id'] = $userId;
-    //   header("06_prove.php");
-    // }
+    if (!isset($userId[0]['user_id'])) {
+      $success = false;
+    } else {
+      $_SESSION['user_id'] = $userId[0]['user_id'];
+      header("06_prove.php");
+    }
   }
 ?>
 
