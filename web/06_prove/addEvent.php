@@ -23,7 +23,7 @@
         <!-- Event Description -->
         <div class="form-group">
           <label for="eventDesc">Event Description</label>
-          <input type="text" id="eventDesc" name="eventName">
+          <input type="text" id="eventDesc" name="eventDesc">
         </div>
 
         <!-- Event Date -->
