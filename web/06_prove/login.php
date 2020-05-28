@@ -15,8 +15,9 @@
       if (!isset($userId))
         $success = false;
       else {
-        // $_SESSION['user_id'] = $userId;
-        // header('06_prove.php');
+        $_SESSION['user_id'] = $userId;
+        header('Location: 06_prove.php');
+        exit;
       }
     }
     catch (PDOException $ex)
