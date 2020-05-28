@@ -6,8 +6,7 @@
     $success = true;
 
   if (isset($_POST['username'])) {
-    echo "Username and Password check executed.";
-    $stmt = $db->prepare("SELECT user_id FROM users WHERE username = :username AND password = :password");
+    $stmt = $db->prepare("SELECT user_id FROM users WHERE username=:username AND password=:password");
     $stmt->bindValue(":username", $_POST['username'], PDO::PARAM_STR);
     $stmt->bindValue(":password", $_POST['password'], PDO::PARAM_STR);
     $stmt->execute();
