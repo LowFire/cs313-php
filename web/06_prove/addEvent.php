@@ -37,7 +37,7 @@
           <label for="hr">Hour</label>
           <input type="number" id="hr" name="hr" max="12" min="1">
           <label for="min">Minute</label>
-          <input type="text" id="min" name="min" max="59" min="0">
+          <input type="number" id="min" name="min" max="59" min="0">
           <select name="abbriv" id="abbriv">
             <option value="PM">PM</option>
             <option value="AM">AM</option>
