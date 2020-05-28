@@ -11,13 +11,13 @@
       $stmt->bindValue(":username", $_POST['username'], PDO::PARAM_STR);
       $stmt->bindValue(":password", $_POST['password'], PDO::PARAM_STR);
       $stmt->execute();
+      $userId = $stmt->fetch(PDO::FETCH_ASSOC);
     }
     catch (PDOException $ex)
     {
       echo 'Error!: ' . $ex->getMessage();
       die();
     }
-    $userId = $stmt->fetch(PDO::FETCH_ASSOC);
     var_dump($userId);
     if (!isset($userId)) {
       $success = false;
