@@ -11,7 +11,7 @@
   <body class="container">
     <h1>Add New Event</h1>
 
-    <form action="processAddEvent.php" method="GET" class="form">
+    <form action="processAddEvent.php" method="POST" class="form">
       <div class="form-group">
 
         <!-- Event Name -->

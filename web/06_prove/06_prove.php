@@ -1,6 +1,4 @@
-<?php session_start(); 
-  var_dump($_SESSION['user_id']);
-?>
+<?php session_start();?>
 
 <!DOCTYPE html>
 <html>

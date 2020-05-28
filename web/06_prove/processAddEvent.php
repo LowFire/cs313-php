@@ -4,7 +4,7 @@
 
     $db = getDB();
     
-    if (isset($_GET)) {
+    if (!isempty($_POST)) {
         $stmt = $db->prepare("INSERT INTO calendar(eventname, eventdesc, eventdate, eventhr, eventmin, eventabbriv, user_id) 
         VALUES (:eventname, :eventdesc, :eventdate, :eventhr, :eventmin, :eventabbriv, :user_id)");
 
@@ -16,6 +16,6 @@
         $stmt->bindValue(":eventabbriv", $_GET['eventAbbriv'], PDO::PARAM_STR);
         $stmt->bindValue(":user_id", $_SESSION['user_id'], PDO::PARAM_INT);
     } else {
-        echo "Error: GET request was not sent.";
+        echo "Error: POST request was not sent.";
     }
 ?>
