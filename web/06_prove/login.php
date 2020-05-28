@@ -4,14 +4,13 @@
 
     $db = getDB();
     $success = true;
-  var_dump($_POST);
   if (isset($_POST['username'])) {
     try {
       $stmt = $db->prepare("SELECT user_id FROM users WHERE username=:username AND password=:password");
       $stmt->bindValue(":username", $_POST['username'], PDO::PARAM_STR);
       $stmt->bindValue(":password", $_POST['password'], PDO::PARAM_STR);
       $stmt->execute();
-      $userId = $stmt->fetch(PDO::FETCH_ASSOC);
+      // $userId = $stmt->fetch(PDO::FETCH_ASSOC);
     }
     catch (PDOException $ex)
     {
