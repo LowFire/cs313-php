@@ -4,7 +4,7 @@
 
     $db = getDB();
     $success = true;
-
+  var_dump($_POST);
   if (isset($_POST['username'])) {
     try {
       $stmt = $db->prepare("SELECT user_id FROM users WHERE username=:username AND password=:password");
@@ -18,6 +18,7 @@
       die();
     }
     $userId = $stmt->fetch(PDO::FETCH_ASSOC)[0];
+    var_dump($userId);
     if (!isset($userId)) {
       $success = false;
     }
