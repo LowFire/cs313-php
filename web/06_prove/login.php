@@ -10,7 +10,9 @@
       $stmt->bindValue(":username", $_POST['username'], PDO::PARAM_STR);
       $stmt->bindValue(":password", $_POST['password'], PDO::PARAM_STR);
       $stmt->execute();
-      $userId = $stmt->fetchAll(PDO::FETCH_ASSOC);
+      if (!$userId = $stmt->fetchAll(PDO::FETCH_ASSOC)) {
+        echo "Fetch Failed";
+      }
     }
     catch (PDOException $ex)
     {
