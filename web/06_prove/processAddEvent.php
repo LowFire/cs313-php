@@ -2,7 +2,7 @@
     session_start();
     require "getDB.php";
 
-    $db = getDB();
+    //$db = getDB();
 
     if (!isempty($_POST)) {
         // $stmt = $db->prepare("INSERT INTO calendar(eventname, eventdesc, eventdate, eventhr, eventmin, eventabbriv, user_id) 
