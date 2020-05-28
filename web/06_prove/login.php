@@ -17,7 +17,7 @@
       echo 'Error!: ' . $ex->getMessage();
       die();
     }
-    $userId = $stmt->fetch(PDO::FETCH_ASSOC)[0];
+    $userId = $stmt->fetch(PDO::FETCH_ASSOC);
     var_dump($userId);
     if (!isset($userId)) {
       $success = false;
