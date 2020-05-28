@@ -4,6 +4,8 @@
 
     $db = getDB();
     var_dump($_POST);
+    var_dump(intval($_POST['hr']));
+    var_dump(intval($_POST['min']));
 
     if (!isempty($_POST)) {
         $stmt = $db->prepare("INSERT INTO calendar(eventname, eventdesc, eventdate, eventhr, eventmin, eventabbriv, user_id) 
