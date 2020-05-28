@@ -3,9 +3,9 @@
   session_start();
 
     $db = getDB();
+    $success = true;
 
     if (isset($_POST)) {
-      $success = true;
       $stmt = $db->prepare("SELECT user_id FROM users WHERE username = :username AND password = :password");
       $stmt->bindValue(":username", $_POST['username'], PDO::PARAM_STR);
       $stmt->bindValue(":password", $_POST['password'], PDO::PARAM_STR);
@@ -50,7 +50,7 @@
     </form>
 
     <?php 
-      if (!$success && isset($_POST))
+      if (!$success && !isempty($_POST))
         echo "<p>Username or password is incorrect.</p>";
     ?>
   </body>
