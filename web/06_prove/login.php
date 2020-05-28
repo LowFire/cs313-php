@@ -6,13 +6,12 @@
     $success = true;
   if (isset($_POST['username'])) {
     try {
+      echo "Fetched data";
       $stmt = $db->prepare("SELECT user_id FROM users WHERE username=:username AND password=:password");
       $stmt->bindValue(":username", $_POST['username'], PDO::PARAM_STR);
       $stmt->bindValue(":password", $_POST['password'], PDO::PARAM_STR);
       $stmt->execute();
-      if (!$userId = $stmt->fetchAll(PDO::FETCH_ASSOC)) {
-        echo "Fetch Failed";
-      }
+      //$stmt->fetchAll(PDO::FETCH_ASSOC);
     }
     catch (PDOException $ex)
     {
