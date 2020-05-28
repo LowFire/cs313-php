@@ -15,4 +15,7 @@
     } else {
         echo "Error: POST request was not sent.";
     }
+
+    header("Location: addEvent.php");
+    exit;
 ?>
