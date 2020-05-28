@@ -5,8 +5,8 @@
     $db = getDB();
 
     if (!isempty($_POST)) {
-        $stmt = $db->prepare("INSERT INTO calendar(eventname, eventdesc, eventdate, eventhr, eventmin, eventabbriv, user_id) 
-        VALUES (:eventname, :eventdesc, :eventdate, :eventhr, :eventmin, :eventabbriv, :user_id)");
+        // $stmt = $db->prepare("INSERT INTO calendar(eventname, eventdesc, eventdate, eventhr, eventmin, eventabbriv, user_id) 
+        // VALUES (:eventname, :eventdesc, :eventdate, :eventhr, :eventmin, :eventabbriv, :user_id)");
 
         //$stmt->bindValue(":eventname", $_POST['eventName'], PDO::PARAM_STR);
         //$stmt->bindValue(":eventdesc", $_POST['eventDesc'], PDO::PARAM_STR);
