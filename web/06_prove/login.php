@@ -12,6 +12,7 @@
       $stmt->bindValue(":password", $_POST['password'], PDO::PARAM_STR);
       $stmt->execute();
       $userId = $stmt->fetchAll(PDO::FETCH_ASSOC);
+      var_dump($userId);
     }
     catch (PDOException $ex)
     {
