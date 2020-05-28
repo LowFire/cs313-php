@@ -9,7 +9,7 @@
   <body class="container">
     <h1>Add New Event</h1>
 
-    <form action="addEvent.php" class="form">
+    <form action="processAddEvent.php" method="GET" class="form">
       <div class="form-group">
 
         <!-- Event Name -->
@@ -33,9 +33,9 @@
         <!-- Event Time -->
         <div class="form-group">
           <label for="hr">Hour</label>
-          <input type="number" id="hr" name="hr">
+          <input type="number" id="hr" name="hr" max="12" min="1">
           <label for="min">Minute</label>
-          <input type="text" id="min" name="min">
+          <input type="text" id="min" name="min" max="59" min="0">
           <select name="abbriv" id="abbriv">
             <option value="PM">PM</option>
             <option value="AM">AM</option>
