@@ -6,20 +6,24 @@
     $success = true;
   if (isset($_POST['username'])) {
     try {
-      echo "Fetched data";
       $stmt = $db->prepare("SELECT user_id FROM users WHERE username=:username AND password=:password");
       $stmt->bindValue(":username", $_POST['username'], PDO::PARAM_STR);
       $stmt->bindValue(":password", $_POST['password'], PDO::PARAM_STR);
       $stmt->execute();
       $userId = $stmt->fetch(PDO::FETCH_ASSOC)['user_id'];
-      var_dump($userId);
     }
     catch (PDOException $ex)
     {
       echo 'Error!: ' . $ex->getMessage();
       die();
     }
-    
+  
+    if (!isset($userId))
+      $success = false;
+    else {
+      $_SESSION['user_id'] = $userId;
+      header('06_prove.php');
+    }
   }
 ?>
 
