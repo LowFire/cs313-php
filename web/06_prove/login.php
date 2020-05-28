@@ -5,11 +5,20 @@
     $db = getDB();
 
     if (isset($_POST)) {
+      $success = true;
       $stmt = $db->prepare("SELECT user_id FROM users WHERE username = :username AND password = :password");
       $stmt->bindValue(":username", $_POST['username'], PDO::PARAM_STR);
       $stmt->bindValue(":password", $_POST['password'], PDO::PARAM_STR);
       $stmt->execute();
       $userId = $stmt->fetch(PDO::FETCH_ASSOC)[0];
+      if (!isset($userId)) {
+        $success = false;
+      }
+    }
+
+    if (isset($userId)){
+      $_SESSION['user_id'] = $userId;
+      header("06_prove.php");
     }
 ?>
 
@@ -41,7 +50,7 @@
     </form>
 
     <?php 
-      if (!$success)
+      if (!$success && isset($_POST))
         echo "<p>Username or password is incorrect.</p>";
     ?>
   </body>
