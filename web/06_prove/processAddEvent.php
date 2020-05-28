@@ -1,4 +1,5 @@
 <?php
+    session_start();
     require "getDB.php";
 
     $db = getDB();
@@ -13,7 +14,7 @@
         $stmt->bindValue(":eventhr", $_GET['eventHr'], PDO::PARAM_INT);
         $stmt->bindValue(":eventmin", $_GET['eventMin'], PDO::PARAM_INT);
         $stmt->bindValue(":eventabbriv", $_GET['eventAbbriv'], PDO::PARAM_STR);
-        $stmt->bindValue(":user_id", 1, PDO::PARAM_INT);
+        $stmt->bindValue(":user_id", $_SESSION['user_id'], PDO::PARAM_INT);
     } else {
         echo "Error: GET request was not sent.";
     }
