@@ -14,6 +14,8 @@
       if (!isset($userId)) {
         $success = false;
       }
+
+      echo "Password Check Executed";
     }
 
     if (isset($userId)){
