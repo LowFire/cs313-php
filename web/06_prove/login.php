@@ -6,10 +6,17 @@
     $success = true;
 
     if (!isempty($_POST)) {
+      try {
       $stmt = $db->prepare("SELECT user_id FROM users WHERE username = :username AND password = :password");
       $stmt->bindValue(":username", $_POST['username'], PDO::PARAM_STR);
       $stmt->bindValue(":password", $_POST['password'], PDO::PARAM_STR);
       $stmt->execute();
+      } 
+      catch (PDOException $ex)
+      {
+        echo 'Error!: ' . $ex->getMessage();
+        die();
+      }
       $userId = $stmt->fetch(PDO::FETCH_ASSOC)[0];
       if (!isset($userId)) {
         $success = false;
