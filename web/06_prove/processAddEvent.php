@@ -16,7 +16,7 @@
         $stmt->bindValue(":eventabbriv", $_POST['abbriv'], PDO::PARAM_STR);
         $stmt->bindValue(":user_id", $_SESSION['user_id'], PDO::PARAM_INT);
 
-        $stmt->execute();
+        //$stmt->execute();
     } else {
         echo "Error: POST request was not sent.";
     }
