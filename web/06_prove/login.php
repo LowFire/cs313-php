@@ -50,7 +50,7 @@
     </form>
 
     <?php 
-      if (!$success && !isempty($_POST))
+      if (!$success && isset($_POST))
         echo "<p>Username or password is incorrect.</p>";
     ?>
   </body>
