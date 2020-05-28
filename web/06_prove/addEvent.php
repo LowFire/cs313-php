@@ -7,20 +7,28 @@
   </head>
   
   <body class="container">
+    <h1>Add New Event</h1>
+
     <form action="addEvent.php" class="form">
       <div class="form-group">
 
         <!-- Event Name -->
-        <label for="eventName">Event Name</label>
-        <input type="text" id="eventName" name="eventName">
+        <div class="form-group">
+          <label for="eventName">Event Name</label>
+          <input type="text" id="eventName" name="eventName">
+        </div>
 
         <!-- Event Description -->
-        <label for="eventDesc">Event Description</label>
-        <input type="text" id="eventDesc" name="eventName">
+        <div class="form-group">
+          <label for="eventDesc">Event Description</label>
+          <input type="text" id="eventDesc" name="eventName">
+        </div>
 
         <!-- Event Date -->
-        <label for="date">Event Date</label>
-        <input type="date" id="date" name="date">
+        <div class="form-group">
+          <label for="date">Event Date</label>
+          <input type="date" id="date" name="date">
+        </div>
 
         <!-- Event Time -->
         <div class="form-group">
@@ -28,11 +36,13 @@
           <input type="number" id="hr" name="hr">
           <label for="min">Minute</label>
           <input type="text" id="min" name="min">
-          <optgroup name="abbriv">
+          <select name="abbriv" id="abbriv">
             <option value="PM">PM</option>
             <option value="AM">AM</option>
-          </optgroup>
+          </select>
         </div>
+
+        <input type="submit">
       </div>
     </form>
   </body>
