@@ -28,14 +28,16 @@
           <th></th>
         </thead>
 
-        <tbody>
+        <tbody id="eventRows">
           <?php
+            $i = 0;
             foreach ($events as $event) {
-              printf("<tr><td>%s</td><td>%s</td><td>%s</td><td>%d:%02d %s</td><td>" . 
+              printf("<tr id=\"r" . $i . "\"><td>%s</td><td>%s</td><td>%s</td><td>%d:%02d %s</td><td>" . 
               "<button class=\"btn btn-primary update\">Update</button>" .
               "<button class=\"btn btn-danger delete\">Delete</button></td></tr>", 
               $event['eventname'], $event['eventdesc'], $event['eventdate'], $event['eventhr'],
               $event['eventmin'], $event['eventabbriv']);
+              $i++;
             }
           ?>
         </tbody>
