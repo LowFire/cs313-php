@@ -31,7 +31,8 @@
         <tbody>
           <?php
             foreach ($events as $event) {
-              printf("<tr><td>%s</td><td>%s</td><td>%s</td><td>%d:%2.0d %s</td></tr>", 
+              printf("<tr><td>%s</td><td>%s</td><td>%s</td><td>%d:%2.0d %s</td><td>" . 
+              "<button class=\"btn btn-lg-primary\">Update</button><button class=\"btn btn-lg-warning\">Delete</button></td></tr>", 
               $event['eventname'], $event['eventdesc'], $event['eventdate'], $event['eventhr'],
               $event['eventmin'], $event['eventabbriv']);
             }
