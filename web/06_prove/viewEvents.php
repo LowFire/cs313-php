@@ -3,7 +3,7 @@
   require "getDB.php";
   
   $db = getDB();
-  $stmt = $db->prepare("SELECT event_id eventname, eventdesc, eventdate, eventhr, eventmin, eventabbriv FROM calendar WHERE user_id=:user_id");
+  $stmt = $db->prepare("SELECT event_id, eventname, eventdesc, eventdate, eventhr, eventmin, eventabbriv FROM calendar WHERE user_id=:user_id");
   $stmt->bindValue(":user_id", $_SESSION['user_id'], PDO::PARAM_INT);
   $stmt->execute();
   $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -36,7 +36,6 @@
               "<button class=\"btn btn-danger delete\">Delete</button></td></tr>", 
               $event['eventname'], $event['eventdesc'], $event['eventdate'], $event['eventhr'],
               $event['eventmin'], $event['eventabbriv']);
-              $i++;
             }
           ?>
         </tbody>
