@@ -32,7 +32,7 @@
           <?php
             foreach ($events as $event) {
               printf("<tr><td>%s</td><td>%s</td><td>%s</td><td>%d:%2.0d %s</td><td>" . 
-              "<button class=\"btn btn-primary-lg\">Update</button><button class=\"btn btn-warning-lg\">Delete</button></td></tr>", 
+              "<button class=\"btn btn-primary\">Update</button><button class=\"btn btn-warning\">Delete</button></td></tr>", 
               $event['eventname'], $event['eventdesc'], $event['eventdate'], $event['eventhr'],
               $event['eventmin'], $event['eventabbriv']);
             }
