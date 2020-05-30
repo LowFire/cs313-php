@@ -33,12 +33,17 @@ function update() {
     let cancelButton = document.createElement("button");
     saveButton.setAttribute("class", "btn btn-primary");
     cancelButton.setAttribute("class", "btn btn-danger");
+    saveButton.addEventListener("click", save);
+    cancelButton.addEventListener("click", cancel);
+
     let saveText = document.createTextNode("Save");
     let cancelText = document.createTextNode("Cancel");
     saveButton.appendChild(saveText);
     cancelButton.appendChild(cancelText);
     buttonColumn.appendChild(saveButton);
     buttonColumn.appendChild(cancelButton);
+
+
 }
 
 for (let i = 0; i < updateButtons.length; i++) {
