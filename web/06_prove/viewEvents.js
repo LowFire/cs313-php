@@ -8,7 +8,30 @@ function deleteEvent() {
 }
 
 function save() {
+    let rowNum = this.dataset.row;
+    let eventNameInput = document.querySelector("#eventname" + rowNum);
+    let eventDescInput = document.querySelector("#eventdesc" + rowNum);
+    let eventDateInput = document.querySelector("#eventdate" + rowNum);
+    let eventHrInput = document.querySelector("#eventhr" + rowNum);
+    let eventMinInput = document.querySelector("#eventmin" + rowNum);
+    let eventAbbrivInput = document.querySelector("#eventabbriv" + rowNum);
+    let event_id = this.parentElement.parentElement.dataset.event_id;
     
+    xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            rows[rowNum].innerHTML = this.responseText;
+        }
+    };
+    xhttp.open("GET", 
+    "updateEvent.php?eventname=" + eventNameInput.getAttribute("value") +
+    "&eventdesc=" + eventDescInput.getAttribute("value") +
+    "&eventdate=" + eventDateInput.getAttribute("value") +
+    "&eventhr=" + eventHrInput.getAttribute("value") +
+    "&eventmin=" + eventMinInput.getAttribute("value") +
+    "&eventabbriv=" + eventAbbrivInput.getAttribute("value") +
+    "&event_id=" + event_id, true);
+    xhttp.send();
 }
 
 function cancel() {
@@ -31,7 +54,7 @@ function update() {
     "<td><input type=\"date\" name=\"eventdate\" id=\"eventdate" + rowNum + "\"></td>" +
     "<td><input type=\"number\" name=\"eventhr\" id=\"eventhr" + rowNum + "\" min=\"1\" max=\"12\">" +
     "<input type=\"number\" name=\"eventmin\" id=\"eventmin" + rowNum + "\" min=\"0\" max=\"59\">" +
-    "<select><option value=\"AM\">AM</option><option value=\"PM\">PM</option></select></td>" +
+    "<select name=\"eventabbriv" + rowNum + "\"><option value=\"AM\">AM</option><option value=\"PM\">PM</option></select></td>" +
     "<td id=\"buttons" + rowNum + "\"></td>" +
     "</form>";
 
