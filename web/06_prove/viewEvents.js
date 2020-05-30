@@ -21,6 +21,10 @@ function save() {
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             rows[rowNum].innerHTML = this.responseText;
+            let buttonColumn = document.createElement("td");
+            buttonColumn.appendChild(updateButtons[rowNum]);
+            buttonColumn.appendChild(deleteButtons[rowNum]);
+            rows[rowNum].appendChild(buttonColumn);
         }
     };
     xhttp.open("GET", 
