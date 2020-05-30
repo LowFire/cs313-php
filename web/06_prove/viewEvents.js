@@ -54,7 +54,7 @@ function update() {
     "<td><input type=\"date\" name=\"eventdate\" id=\"eventdate" + rowNum + "\"></td>" +
     "<td><input type=\"number\" name=\"eventhr\" id=\"eventhr" + rowNum + "\" min=\"1\" max=\"12\">" +
     "<input type=\"number\" name=\"eventmin\" id=\"eventmin" + rowNum + "\" min=\"0\" max=\"59\">" +
-    "<select name=\"eventabbriv\" id=\"" + rowNum + "\"><option value=\"AM\">AM</option><option value=\"PM\">PM</option></select></td>" +
+    "<select name=\"eventabbriv\" id=\"eventabbriv" + rowNum + "\"><option value=\"AM\">AM</option><option value=\"PM\">PM</option></select></td>" +
     "<td id=\"buttons" + rowNum + "\"></td>" +
     "</form>";
 
