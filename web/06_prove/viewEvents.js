@@ -16,7 +16,7 @@ function update() {
     deleteButtons[rowNum].textContent = "Cancel"
     deleteButtons[rowNum].addEventListener("click", cancel);
     deleteButtons[rowNum].removeEventListener("click", deleteEvent);
-    let row = document.querySelector("#eventRows tr:nth-of-type(" + (rowNum + 1) + ")");
+    let row = rows[rowNum];
     row.innerHTML = "<form action=\"\" method=\"GET\">" +
     "<td><input type=\"text\" name=\"eventname\" id=\"eventname\"></td>" +
     "<td><input type=\"text\" name=\"eventdesc\" id=\"eventdesc\"></td>" +
