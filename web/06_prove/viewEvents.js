@@ -68,13 +68,19 @@ function cancel() {
 function update() {
     let rowNum = this.dataset.row;
     let row = rows[rowNum];
+    let eventName = document.querySelector("#eventname" + rowNum).value;
+    let eventDesc = document.querySelector("#eventdesc" + rowNum).value;
+    let eventDate = document.querySelector("#eventdate" + rowNum).value;
+    let eventHr = document.querySelector("#eventhr" + rowNum).value;
+    let eventMin = document.querySelector("#eventmin" + rowNum).value;
+    let eventAbbriv = document.querySelector("#eventabbriv" + rowNum).value;
     row.innerHTML = "<form action=\"\" method=\"GET\">" +
-    "<td><input type=\"text\" name=\"eventname\" id=\"eventname" + rowNum + "\"></td>" +
-    "<td><input type=\"text\" name=\"eventdesc\" id=\"eventdesc" + rowNum + "\"></td>" +
-    "<td><input type=\"date\" name=\"eventdate\" id=\"eventdate" + rowNum + "\"></td>" +
-    "<td><input type=\"number\" name=\"eventhr\" id=\"eventhr" + rowNum + "\" min=\"1\" max=\"12\">" +
-    "<input type=\"number\" name=\"eventmin\" id=\"eventmin" + rowNum + "\" min=\"0\" max=\"59\">" +
-    "<select name=\"eventabbriv\" id=\"eventabbriv" + rowNum + "\"><option value=\"AM\">AM</option><option value=\"PM\">PM</option></select></td>" +
+    "<td><input type=\"text\" name=\"eventname\" id=\"eventname" + rowNum + "\" value=\"" + eventName + "\"></td>" +
+    "<td><input type=\"text\" name=\"eventdesc\" id=\"eventdesc" + rowNum + "\" value=\"" + eventDesc + "\"></td>" +
+    "<td><input type=\"date\" name=\"eventdate\" id=\"eventdate" + rowNum + "\" value=\"" + eventDate + "\"></td>" +
+    "<td><input type=\"number\" name=\"eventhr\" id=\"eventhr" + rowNum + "\" value=\"" + eventHr + "\" min=\"1\" max=\"12\">" +
+    "<input type=\"number\" name=\"eventmin\" id=\"eventmin" + rowNum + "\" value=\"" + eventMin + "\" min=\"0\" max=\"59\">" +
+    "<select name=\"eventabbriv\" id=\"eventabbriv" + rowNum + "\" value=\"" + eventAbbriv + "\"><option value=\"AM\">AM</option><option value=\"PM\">PM</option></select></td>" +
     "<td id=\"buttons" + rowNum + "\"></td>" +
     "</form>";
 
