@@ -15,8 +15,9 @@ function cancel() {
     rowNum = this.dataset.row
     rows[rowNum].innerHTML = rowsHTML[rowNum];
     let buttons = document.querySelector("#buttons" + rowNum);
-    buttons.removeChild(buttons.childNodes[0]);
-    buttons.removeChild(buttons.childNodes[1]);
+    let length = buttons.childNodes.length;
+    for (let i = 0; i < length; i++)
+        buttons.removeChild(buttoms.childNodes[0]);
     buttons.appendChild(updateButtons[rowNum]);
     buttons.appendChild(deleteButtons[rowNum]);
 }
