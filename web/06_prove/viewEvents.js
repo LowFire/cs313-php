@@ -14,6 +14,11 @@ function save() {
 function cancel() {
     rowNum = this.dataset.row
     rows[rowNum].innerHTML = rowsHTML[rowNum];
+    let buttons = document.querySelector("#buttons" + rowNum);
+    buttons.removeChild(buttons.childNodes[0]);
+    buttons.removeChild(buttons.childNodes[1]);
+    buttons.appendChild(updateButtons[rowNum]);
+    buttons.appendChild(deleteButtons[rowNum]);
 }
 
 function update() {
