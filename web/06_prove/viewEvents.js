@@ -73,7 +73,7 @@ function update() {
     let eventDate = row.childNodes[2].textContent;
     let eventTime = row.childNodes[3].textContent;
     let eventHr = eventTime[0];
-    let eventMin = eventTime.slice(2, 3);
+    let eventMin = eventTime.slice(1, 3);
     if (eventMin[0] === "0")
         eventMin[0] = 'd';
     eventMin = parseInt(eventMin);
