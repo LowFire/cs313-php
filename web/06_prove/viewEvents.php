@@ -17,7 +17,7 @@
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   </head>
   
-  <body class="container">
+  <body>
     <h1>Events</h1>
       <table class="table table-striped">
         <thead>
