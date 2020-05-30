@@ -8,11 +8,12 @@ function deleteEvent() {
 }
 
 function save() {
-    console.log("Save function has run");
+    
 }
 
 function cancel() {
-    console.log("cancel function has run");
+    rowNum = this.dataset.row
+    rows[rowNum].innerHTML = rowsHTML[rowNum];
 }
 
 function update() {
@@ -32,6 +33,8 @@ function update() {
     let saveButton = document.createElement("button");
     let cancelButton = document.createElement("button");
     saveButton.setAttribute("class", "btn btn-primary");
+    saveButton.setAttribute("data-row", rowNum);
+    cancelButton.setAttribute("data-row", rowNum);
     cancelButton.setAttribute("class", "btn btn-danger");
     saveButton.addEventListener("click", save);
     cancelButton.addEventListener("click", cancel);
@@ -42,8 +45,6 @@ function update() {
     cancelButton.appendChild(cancelText);
     buttonColumn.appendChild(saveButton);
     buttonColumn.appendChild(cancelButton);
-
-
 }
 
 for (let i = 0; i < updateButtons.length; i++) {
