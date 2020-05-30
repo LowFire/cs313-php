@@ -8,6 +8,7 @@
     $eventmin = intval($_REQUEST['eventmin']);
     $eventabbriv = $_REQUEST['eventabbriv'];
     $event_id = intval($_REQUEST['event_id']);
+    $rowNum = $_REQUEST['rownum'];
 
     $updatestmt = $db->prepare("UPDATE calendar SET eventname=:eventname, eventdesc=:eventdesc, " . 
     "eventdate=:eventdate, eventhr=:eventhr, eventmin=:eventmin, eventabbriv=:eventabbriv " .
@@ -27,10 +28,8 @@
     $getstmt->execute();
     $eventData = $getstmt->fetch(PDO::FETCH_ASSOC);
 
-    echo "<td data-event_id=\"" . $eventData['event_id'] . "\">" . 
-        "<td>" . $eventData['eventname'] . "</td>" . 
-        "<td>" . $eventData['eventdesc'] . "</td>" .
-        "<td>" . $eventData['eventdate']. "</td>" .
-        "<td>" . $eventData['eventhr'] . ":" . $eventData['eventmin'] . " " . $eventData['eventabbriv'] . "</td>" .
-        "</tr>";
+    printf("<tr data-event_id=\"" . $event_id . "\"><td>%s</td><td>%s</td><td>%s</td><td>%d:%02d %s</td><td id=\"buttons" . $rowNum . "\">" . 
+              "<button class=\"btn btn-primary update\" data-row=\"" . $rowNum ."\">Update</button>" .
+              "<button class=\"btn btn-danger delete\" data-row=\"" . $rowNum . "\">Delete</button></td></tr>", 
+              $eventname, $eventdesc, $eventdate, $eventhr, $eventmin, $eventabbriv);
 ?>

@@ -34,7 +34,8 @@ function save() {
     "&eventhr=" + eventHrInput.value +
     "&eventmin=" + eventMinInput.value +
     "&eventabbriv=" + eventAbbrivInput.value +
-    "&event_id=" + event_id, true);
+    "&event_id=" + event_id +
+    "&rownum=" + rowNum, true);
     xhttp.send();
 }
 
