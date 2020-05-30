@@ -77,6 +77,7 @@ function update() {
     if (eventMin[0] === "0")
         eventMin[0] = 'd';
     eventMin = parseInt(eventMin);
+    let eventAbbriv = eventTime.slice(5, 7);
     row.innerHTML = "<form action=\"\" method=\"GET\">" +
     "<td><input type=\"text\" name=\"eventname\" id=\"eventname" + rowNum + "\" value=\"" + eventName + "\"></td>" +
     "<td><input type=\"text\" name=\"eventdesc\" id=\"eventdesc" + rowNum + "\" value=\"" + eventDesc + "\"></td>" +
@@ -86,6 +87,12 @@ function update() {
     "<select name=\"eventabbriv\" id=\"eventabbriv" + rowNum + "\"><option value=\"AM\">AM</option><option value=\"PM\">PM</option></select></td>" +
     "<td id=\"buttons" + rowNum + "\"></td>" +
     "</form>";
+
+    let abbrivSelection = document.querySelector("#eventabbriv" + rowNum);
+    if (eventAbbriv === "AM")
+        abbrivSelection.childNodes[0].setAttribute("selected", "true");
+    else
+        abbrivSelection.childNodes[1].setAttribute("selected", "true");
 
     let buttonColumn = document.querySelector("#buttons" + rowNum);
     let saveButton = document.createElement("button");
