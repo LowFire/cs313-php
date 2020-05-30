@@ -73,7 +73,7 @@ function update() {
     let eventDate = row.childNodes[2].textContent;
     let eventTime = row.childNodes[3].textContent;
     let eventHr = eventTime[0];
-    let eventMin = eventTime.slice(1, 2);
+    let eventMin = eventTime.slice(2, 3);
     row.innerHTML = "<form action=\"\" method=\"GET\">" +
     "<td><input type=\"text\" name=\"eventname\" id=\"eventname" + rowNum + "\" value=\"" + eventName + "\"></td>" +
     "<td><input type=\"text\" name=\"eventdesc\" id=\"eventdesc" + rowNum + "\" value=\"" + eventDesc + "\"></td>" +
