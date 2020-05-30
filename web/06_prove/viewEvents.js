@@ -74,16 +74,21 @@ function update() {
     let eventTime = row.childNodes[3].textContent;
     let eventHr = eventTime[0];
     let eventMin = eventTime.slice(2, 4);
-    if (eventMin[0] === "0")
+    let eventMinNum = 0;
+    if (eventMin[0] !== '0')
+        eventMinNum = parseInt(eventMin);
+    else if (eventMin[1] !== '0') {
         eventMin[0] = 'd';
-    eventMin = parseInt(eventMin);
+        eventMinNum = parseInt(eventMin);
+    }
+    
     let eventAbbriv = eventTime.slice(5, 7);
     row.innerHTML = "<form action=\"\" method=\"GET\">" +
     "<td><input type=\"text\" name=\"eventname\" id=\"eventname" + rowNum + "\" value=\"" + eventName + "\"></td>" +
     "<td><input type=\"text\" name=\"eventdesc\" id=\"eventdesc" + rowNum + "\" value=\"" + eventDesc + "\"></td>" +
     "<td><input type=\"date\" name=\"eventdate\" id=\"eventdate" + rowNum + "\" value=\"" + eventDate + "\"></td>" +
     "<td><input type=\"number\" name=\"eventhr\" id=\"eventhr" + rowNum + "\" value=\"" + eventHr + "\" min=\"1\" max=\"12\">" +
-    "<input type=\"number\" name=\"eventmin\" id=\"eventmin" + rowNum + "\" value=\"" + eventMin + "\" min=\"0\" max=\"59\">" +
+    "<input type=\"number\" name=\"eventmin\" id=\"eventmin" + rowNum + "\" value=\"" + eventMinNum + "\" min=\"0\" max=\"59\">" +
     "<select name=\"eventabbriv\" id=\"eventabbriv" + rowNum + "\"><option value=\"AM\">AM</option><option value=\"PM\">PM</option></select></td>" +
     "<td id=\"buttons" + rowNum + "\"></td>" +
     "</form>";
