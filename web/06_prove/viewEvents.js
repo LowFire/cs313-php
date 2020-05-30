@@ -25,6 +25,7 @@ function save() {
             buttonColumn.appendChild(updateButtons[rowNum]);
             buttonColumn.appendChild(deleteButtons[rowNum]);
             rows[rowNum].appendChild(buttonColumn);
+            rowsHTML[rowNum] = rows[rowNum].innerHTML;
         }
     };
     xhttp.open("GET", 

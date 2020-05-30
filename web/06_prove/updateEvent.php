@@ -28,8 +28,6 @@
     $getstmt->execute();
     $eventData = $getstmt->fetch(PDO::FETCH_ASSOC);
 
-    printf("<tr data-event_id=\"" . $event_id . "\"><td>%s</td><td>%s</td><td>%s</td><td>%d:%02d %s</td><td id=\"buttons" . $rowNum . "\">" . 
-              "<button class=\"btn btn-primary update\" data-row=\"" . $rowNum ."\">Update</button>" .
-              "<button class=\"btn btn-danger delete\" data-row=\"" . $rowNum . "\">Delete</button></td></tr>", 
+    printf("<tr data-event_id=\"" . $event_id . "\"><td>%s</td><td>%s</td><td>%s</td><td>%d:%02d %s</td><td id=\"buttons" . $rowNum . "\"></tr>", 
               $eventname, $eventdesc, $eventdate, $eventhr, $eventmin, $eventabbriv);
 ?>
