@@ -42,5 +42,6 @@
           ?>
         </tbody>
       </table>
+      <script type="text/javascript" src="viewEvents.js"></script>
   </body>
 </html>
