@@ -68,12 +68,13 @@ function cancel() {
 function update() {
     let rowNum = this.dataset.row;
     let row = rows[rowNum];
-    let eventName = document.querySelector("#eventname" + rowNum).value;
-    let eventDesc = document.querySelector("#eventdesc" + rowNum).value;
-    let eventDate = document.querySelector("#eventdate" + rowNum).value;
-    let eventHr = document.querySelector("#eventhr" + rowNum).value;
-    let eventMin = document.querySelector("#eventmin" + rowNum).value;
-    let eventAbbriv = document.querySelector("#eventabbriv" + rowNum).value;
+    let eventName = row.childNodes[0].textContent;
+    let eventDesc = row.childNodes[1].textContent;
+    let eventDate = row.childNodes[2].textContent;
+    let eventTime = row.childNodes[3].textContent;
+    let eventHr = eventTime[0];
+    let eventMin = eventTime.slice(1, 3);
+    let eventAbbriv = eventTime.slice(4, 6);
     row.innerHTML = "<form action=\"\" method=\"GET\">" +
     "<td><input type=\"text\" name=\"eventname\" id=\"eventname" + rowNum + "\" value=\"" + eventName + "\"></td>" +
     "<td><input type=\"text\" name=\"eventdesc\" id=\"eventdesc" + rowNum + "\" value=\"" + eventDesc + "\"></td>" +
