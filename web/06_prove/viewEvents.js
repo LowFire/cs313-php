@@ -22,7 +22,7 @@ function save() {
         if (this.readyState == 4 && this.status == 200) {
             rows[rowNum].innerHTML = this.responseText;
             let buttonColumn = document.createElement("td");
-            buttonsColumn.setAttribute("id", "buttons" + rowNum);
+            buttonColumn.setAttribute("id", "buttons" + rowNum);
             buttonColumn.appendChild(updateButtons[rowNum]);
             buttonColumn.appendChild(deleteButtons[rowNum]);
             rows[rowNum].appendChild(buttonColumn);
