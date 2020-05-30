@@ -32,7 +32,7 @@
           <?php
             $i = 0;
             foreach ($events as $event) {
-              printf("<tr><td>%s</td><td>%s</td><td>%s</td><td>%d:%02d %s</td><td>" . 
+              printf("<tr><td>%s</td><td>%s</td><td>%s</td><td>%d:%02d %s</td><td id=\"buttons" . $i . "\">" . 
               "<button class=\"btn btn-primary update\" data-row=\"" . $i ."\">Update</button>" .
               "<button class=\"btn btn-danger delete\" data-row=\"" . $i . "\">Delete</button></td></tr>", 
               $event['eventname'], $event['eventdesc'], $event['eventdate'], $event['eventhr'],
