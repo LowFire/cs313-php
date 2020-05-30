@@ -9,6 +9,15 @@
     $eventabbriv = $_REQUEST['eventabbriv'];
     $event_id = intval($_REQUEST['event_id']);
 
+    var_dump($eventname);
+    var_dump($eventdesc);
+    var_dump($eventdate);
+    var_dump($eventhr);
+    var_dump($eventmin);
+    var_dump($eventabbriv);
+    var_dump($event_id);
+    die();
+
     $updatestmt = $db->prepare("UPDATE calendar SET eventname=:eventname, eventdesc=:eventdesc " . 
     "eventdate=:eventdate, eventhr=:eventhr, eventmin=:eventmin, eventabbriv=:eventabbriv " .
     "WHERE event_id=:event_id");
