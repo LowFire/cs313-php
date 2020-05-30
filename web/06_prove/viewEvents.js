@@ -4,7 +4,16 @@ let deleteButtons = document.querySelectorAll(".delete");
 let rowsHTML = {};
 
 function deleteEvent() {
-    console.log("delete function has run");
+    let rowNum = this.dataset.row;
+    let event_id = this.parentElement.parentElement.dataset.event_id;
+    xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            rows[rowNum].remove();
+        }
+    };
+    xhttp.open("GET", "deleteEvent.php?event_id=" + event_id, true);
+    xhttp.send();
 }
 
 function save() {
