@@ -1,6 +1,6 @@
 let rows = document.querySelectorAll("#eventRows > tr");
 let updateButtons = document.querySelectorAll(".update");
-let deleteButtons = document.querySelectorAll("delete");
+let deleteButtons = document.querySelectorAll(".delete");
 
 function deleteEvent() {
 
