@@ -24,12 +24,12 @@ function save() {
         }
     };
     xhttp.open("GET", 
-    "updateEvent.php?eventname=" + eventNameInput.getAttribute("value") +
-    "&eventdesc=" + eventDescInput.getAttribute("value") +
-    "&eventdate=" + eventDateInput.getAttribute("value") +
-    "&eventhr=" + eventHrInput.getAttribute("value") +
-    "&eventmin=" + eventMinInput.getAttribute("value") +
-    "&eventabbriv=" + eventAbbrivInput.getAttribute("value") +
+    "updateEvent.php?eventname=" + eventNameInput.value +
+    "&eventdesc=" + eventDescInput.value +
+    "&eventdate=" + eventDateInput.value +
+    "&eventhr=" + eventHrInput.value +
+    "&eventmin=" + eventMinInput.value +
+    "&eventabbriv=" + eventAbbrivInput.value +
     "&event_id=" + event_id, true);
     xhttp.send();
 }
