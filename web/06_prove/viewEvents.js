@@ -31,6 +31,8 @@ function update() {
     let buttonColumn = document.querySelector("#buttons" + rowNum);
     let saveButton = document.createElement("button");
     let cancelButton = document.createElement("button");
+    saveButton.setAttribute("class", "btn btn-primary");
+    cancelButton.setAttribute("class", "btn btn-danger");
     let saveText = document.createTextNode("Save");
     let cancelText = document.createTextNode("Cancel");
     saveButton.appendChild(saveText);
